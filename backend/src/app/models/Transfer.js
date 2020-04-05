@@ -15,10 +15,13 @@ class Transfer extends Model {
   }
 
   static associate(models) {
-    this.belongsToMany(models.Account, {
-      foreignKey: 'accountReceive_id',
-      through: 'transfers',
-      as: 'transfersReceive',
+    this.belongsTo(models.Account, {
+      foreignKey: 'account_sent_id',
+      as: 'transfer_sent',
+    });
+    this.belongsTo(models.Account, {
+      foreignKey: 'account_received_id',
+      as: 'transfer_receive',
     });
   }
 }

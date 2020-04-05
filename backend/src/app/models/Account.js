@@ -16,15 +16,18 @@ class Account extends Model {
 
   static associate(models) {
     this.belongsTo(models.User, { foreignKey: 'user_id', as: 'user' });
-    this.belongsTo(models.Card, { foreignKey: 'account_id', as: 'card' });
+    this.hasOne(models.Card, { foreignKey: 'account_id', as: 'card' });
     this.hasMany(models.Operation, {
       foreignKey: 'account_id',
       as: 'operations',
     });
-    this.belongsToMany(models.Transfer, {
-      foreignKey: 'accountSent_id',
-      through: 'transfers',
-      as: 'transfersSent',
+    this.hasMany(models.Transfer, {
+      foreignKey: 'account_sent_id',
+      as: 'transfer_sent',
+    });
+    this.hasMany(models.Transfer, {
+      foreignKey: 'account_received_id',
+      as: 'transfer_received',
     });
   }
 }

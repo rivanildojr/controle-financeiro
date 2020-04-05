@@ -11,14 +11,14 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      accountSent_id: {
+      account_sent_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: { model: 'accounts', key: 'id' },
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE',
       },
-      accountReceive_id: {
+      account_received_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: { model: 'accounts', key: 'id' },

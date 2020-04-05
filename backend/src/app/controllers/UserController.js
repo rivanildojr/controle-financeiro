@@ -33,7 +33,17 @@ export default {
         date_expire: Date.now(),
       });
 
-      return res.status(201).json({ user, account, card });
+      return res.status(201).json({
+        id: user.id,
+        name: user.name,
+        login: user.login,
+        account_id: account.id,
+        number_account: account.number_account,
+        agency: account.agency,
+        balance: account.balance,
+        number_card: card.number_card,
+        date_expire: card.date_expire,
+      });
     } catch (error) {
       return res.status(500).json({ err: 'Internal server error' });
     }
