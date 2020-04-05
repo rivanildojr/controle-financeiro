@@ -7,10 +7,6 @@ module.exports = {
         allowNull: false,
         primaryKey: true,
       },
-      name: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
       account_sent_id: {
         type: Sequelize.INTEGER,
         allowNull: false,

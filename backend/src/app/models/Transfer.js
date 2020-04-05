@@ -4,8 +4,6 @@ class Transfer extends Model {
   static init(sequelize) {
     super.init(
       {
-        name: DataTypes.STRING,
-        numberAccount: DataTypes.INTEGER,
         value: DataTypes.FLOAT,
       },
       {
