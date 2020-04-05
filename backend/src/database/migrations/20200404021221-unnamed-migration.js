@@ -29,13 +29,13 @@ module.exports = {
         type: Sequelize.FLOAT,
         allowNull: false,
       },
-      createdAt: {
-        type: Sequelize.DATE,
+      created_at: {
         allowNull: false,
+        type: Sequelize.DATE,
       },
-      updatedAt: {
-        type: Sequelize.DATE,
+      updated_at: {
         allowNull: false,
+        type: Sequelize.DATE,
       },
     });
   },

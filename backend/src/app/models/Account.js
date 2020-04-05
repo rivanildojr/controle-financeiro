@@ -4,8 +4,8 @@ class Account extends Model {
   static init(sequelize) {
     super.init(
       {
-        numberAccount: DataTypes.STRING,
-        agency: DataTypes.STRING,
+        number_account: DataTypes.INTEGER,
+        agency: DataTypes.INTEGER,
         balance: DataTypes.FLOAT,
       },
       {

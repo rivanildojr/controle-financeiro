@@ -14,26 +14,26 @@ module.exports = {
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE',
       },
-      name: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-      login: {
-        type: Sequelize.STRING,
+      number_account: {
+        type: Sequelize.INTEGER,
         unique: true,
         allowNull: false,
       },
-      senha: {
-        type: Sequelize.STRING,
+      agency: {
+        type: Sequelize.INTEGER,
         allowNull: false,
       },
-      createdAt: {
-        type: Sequelize.DATE,
+      balance: {
+        type: Sequelize.FLOAT,
         allowNull: false,
       },
-      updatedAt: {
-        type: Sequelize.DATE,
+      created_at: {
         allowNull: false,
+        type: Sequelize.DATE,
+      },
+      updated_at: {
+        allowNull: false,
+        type: Sequelize.DATE,
       },
     });
   },

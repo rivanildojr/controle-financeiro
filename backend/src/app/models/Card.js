@@ -4,8 +4,8 @@ class Card extends Model {
   static init(sequelize) {
     super.init(
       {
-        numberCard: DataTypes.BIGINT,
-        date: DataTypes.DATE,
+        number_card: DataTypes.BIGINT,
+        date_expire: DataTypes.DATE,
       },
       {
         sequelize,

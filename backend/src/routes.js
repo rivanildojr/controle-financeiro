@@ -1,9 +1,10 @@
 import { Router } from 'express';
 
+import UserController from './app/controllers/UserController';
+
 const router = Router();
 
-router.get('/', (req, res) => {
-  return res.json({ name: 'teste' });
-});
+router.get('/users', UserController.index);
+router.post('/users', UserController.store);
 
 export default router;
